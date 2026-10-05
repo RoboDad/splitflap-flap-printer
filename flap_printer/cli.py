@@ -82,8 +82,10 @@ def main(argv: list[str] | None = None) -> int:
     cad_dir = Path(args.cad_dir) if args.cad_dir else _REPO_ROOT / 'cad'
     params_path = cad_dir / 'flap_printer_params.scad'
     try:
-        write_flap_printer_params(params_path, dims, config.jig)
-        logging.info("Wrote %s", params_path)
+        if write_flap_printer_params(params_path, dims, config.jig):
+            logging.info("Wrote %s", params_path)
+        else:
+            logging.debug("%s already up to date", params_path)
     except OSError as e:
         logging.warning("Could not write flap_printer_params.scad: %s", e)
 

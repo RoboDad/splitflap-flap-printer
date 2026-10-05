@@ -12,7 +12,7 @@ consumes the standard flap geometry.
 | Path | Purpose |
 |---|---|
 | `flap_printer/` | The Python package (`python -m flap_printer`) |
-| `cad/` | `flap_printer_jigs.scad` (laser-cut jig), auto-generated `flap_printer_params.scad`, vendored `vendor/flap_profile.scad` |
+| `cad/` | `flap_printer_jigs.scad` (laser-cut jig), gitignored auto-generated `flap_printer_params.scad` (+ committed `.example.scad` snapshot), vendored `vendor/flap_profile.scad` |
 | `assets/` | Committed inputs: `flap_glyphs/<Font>/`, `emoji/`, `photos/`; `local/` is gitignored for your own images |
 | `generators/` | Vendored external generators (`shan-shui-inf`, Node.js) |
 | `examples/` | Job JSON files + `test_images/`; render output lands beside the job file |

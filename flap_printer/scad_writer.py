@@ -19,13 +19,20 @@ def write_flap_printer_params(
     path: str | Path,
     dims: 'AllDimensions',
     jig_config: 'JigConfig',
-) -> None:
+) -> bool:
     """Write (or overwrite) flap_printer_params.scad with current job parameters.
+
+    The file is left untouched when its content would not change, so
+    repeated runs of the same jig do not churn its timestamp (OpenSCAD's
+    auto-reload and git both notice mtime).
 
     Args:
         path: Destination path for flap_printer_params.scad.
         dims: Resolved dimensions (flap physical dims come from here).
         jig_config: Jig / mat parameters from the job JSON config.
+
+    Returns:
+        True if the file was written, False if it was already up to date.
     """
     path = Path(path)
     f = dims.flap
@@ -108,4 +115,11 @@ def write_flap_printer_params(
         f"flatbed_insert_pitch_y = {j.insert_pitch_y_mm if j.insert_pitch_y_mm is not None else 0};\n"
     )
 
+    try:
+        if path.read_text(encoding='utf-8') == content:
+            return False
+    except (OSError, UnicodeDecodeError):
+        pass
+    path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(content, encoding='utf-8')
+    return True

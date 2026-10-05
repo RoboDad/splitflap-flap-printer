@@ -74,7 +74,8 @@ image anchored at the lower-right of the mat — see [Output](#output)).
 
 ## Workflow overview
 
-1. **Cut the jig** once: run any job with `--dry-run`, open
+1. **Cut the jig** once: run any job with `--dry-run` (this generates
+   `cad/flap_printer_params.scad` for that job's jig), open
    `cad/flap_printer_jigs.scad` in OpenSCAD, export the insert and outer
    jig SVGs, laser-cut them (see the file header for materials/thickness).
 2. (Optional, once per mat) print the [sticky mask](#sticky-mask-mat-preparation)
@@ -253,7 +254,10 @@ Sheets](#standard-flatbed-sheets)).
 | `reg_mark_stroke_mm` | float | `1.0` | Registration mark stroke width (mm) |
 
 > **Note:** All jig and mat parameters are written to `cad/flap_printer_params.scad`
-> on every render (override the directory with `--cad-dir`). Open
+> on every run, including `--dry-run` (override the directory with `--cad-dir`;
+> the file is only rewritten when its content changes). It is gitignored —
+> whichever jig you rendered last is what OpenSCAD sees — and a committed
+> `cad/flap_printer_params.example.scad` (minibed) shows its shape. Open
 > `cad/flap_printer_jigs.scad` in OpenSCAD to generate the laser-cut SVG files
 > for the insert and outer jig.
 
@@ -979,7 +983,8 @@ flap_printer/           # Main package; entry point is __main__.py
   gen_city_skyline.py   # First-party pure-Python skyline generator
 cad/
   flap_printer_jigs.scad        # Laser-cut insert + outer jig (OpenSCAD)
-  flap_printer_params.scad      # AUTO-GENERATED on every run (committed default)
+  flap_printer_params.scad      # AUTO-GENERATED on every run, gitignored
+  flap_printer_params.example.scad  # committed minibed snapshot of the above
   vendor/flap_profile.scad      # flap_2d()/rounded_square() from scottbez1/splitflap
 assets/
   flap_glyphs/<Font>/           # Pre-rendered flap_NN.svg + index.json (Epilogue, Roboto)
