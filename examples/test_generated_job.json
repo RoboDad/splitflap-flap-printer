@@ -1,0 +1,29 @@
+{
+  "display": {
+    "num_modules": 6,
+    "module_pitch_mm": 64.0,
+    "inter_module_gap_mm": 10.0
+  },
+  "preview": {
+    "enabled": true,
+    "columns": 8,
+    "dpi": 107,
+    "flap_color": [0, 0, 0],
+    "label_color": [255, 255, 255],
+    "background_color": [40, 40, 40]
+  },
+  "jig": {"type": "minibed", "flip_mode": "front-back"},
+  "output": {
+    "dpi": 508,
+    "format": "png",
+    "bleed_mm": 1.0,
+    "ink_save_mask": true,
+    "labels": false,
+    "output_dir": "test_generated_output"
+  },
+  "custom_flaps": [
+    {"slot": 0, "type": "epilogue", "char": "A"},
+    {"slot": 1, "type": "generated", "generator": "shan-shui-inf", "seed": 42,
+     "module_range": [0, 5], "fit_mode": "fill", "label": "SHAN:42"}
+  ]
+}

@@ -1,0 +1,89 @@
+{
+  "display": {
+    "num_modules": 6,
+    "module_pitch_mm": 64.0,
+    "inter_module_gap_mm": 10.0
+  },
+  "preview": {
+    "enabled": true,
+    "columns": 15,
+    "dpi": 107,
+    "flap_color": [0, 0, 0],
+    "label_color": [255, 255, 255],
+    "background_color": [40, 40, 40],
+    "inter_cell_gap_mm": 10
+  },
+  "active_jig": "minibed",
+  "jigs": {
+    "minibed": {
+      "type": "minibed",
+      "flip_mode": "front-back",
+      "num_flaps_x": 6,
+      "num_flaps_y": 1,
+      "gap_x_mm": 6,
+      "gap_y_mm": 6,
+      "margin_x_mm": 6,
+      "margin_y_mm": 6,
+      "printable_size_x_mm": 333,
+      "printable_size_y_mm": 88,
+      "printable_origin_x_mm": 4.0,
+      "printable_origin_y_mm": 5.0,
+      "insert_origin_x_mm": 20.5,
+      "insert_origin_y_mm": 16,
+      "calibration_offset_mm": [0, 0]
+    },
+    "standard": {
+      "type": "standard",
+      "flip_mode": "front-back",
+      "num_flaps_x": 6,
+      "num_flaps_y": 1,
+      "gap_x_mm": 6,
+      "gap_y_mm": 6,
+      "margin_x_mm": 6,
+      "margin_y_mm": 6,
+      "printable_size_x_mm": 333,
+      "printable_size_y_mm": 418,
+      "printable_origin_x_mm": 4.0,
+      "printable_origin_y_mm": 11.0,
+      "insert_origin_x_mm": 20.5,
+      "insert_origin_y_mm": 25.0,
+      "insert_rows": 5,
+      "insert_pitch_y_mm": 81.0,
+      "mat_size_x_mm": 370,
+      "mat_size_y_mm": 440
+    }
+  },
+  "output": {
+    "dpi": 508,
+    "format": "png",
+    "bleed_mm": 1.0,
+    "ink_save_mask": true,
+    "labels": false,
+    "label_font_size_pt": 6,
+    "output_dir": "example_output",
+    "registration_marks": false
+  },
+  "custom_flaps": [
+    {"slot":  0, "label": "DASH", "type": "epilogue", "char": "-"},
+    {"slot":  1, "label": "DLR",  "type": "epilogue", "char": "$"},
+    {"slot":  2, "type": "emoji", "name": "heart", "notch_mode": "none"},
+    {"slot":  3, "type": "emoji", "name": "joy"},
+    {"slot":  4, "type": "emoji", "name": "wink"},
+    {"slot":  5, "type": "emoji", "name": "smile"},
+    {"slot":  6, "type": "emoji", "name": "sob"},
+    {"slot":  7, "type": "emoji", "name": "kiss", "notch_mode": ["none", "inset"]},
+    {"slot":  8, "type": "emoji", "name": "heart_eyes"},
+    {"slot":  9, "label": "SHAN:42", "type": "generated", "generator": "shan-shui-inf", "seed": 42,
+     "params": {"background": "#f7f3e9"},
+     "module_range": [0, 5], "fit_mode": "fill"},
+    {"slot": 10, "label": "CITY:7", "type": "generated", "generator": "city-skyline", "seed": 7,
+     "params": {"time_of_day": "dusk"},
+     "module_range": [0, 5], "fit_mode": "fill"},
+    {"slot": 11, "label": "TULIPS", "type": "multi-module", "source": "../assets/photos/tulips_6m.png",
+     "module_range": [0, 5], "fit_mode": "stretch"}
+  ],
+  "archived_flaps": [
+    {"slot": 10, "label": "SKY", "type": "multi-module", "source": "test_images/skyline.png",
+     "module_range": [0, 2], "fit_mode": "fit"}
+  ]
+}

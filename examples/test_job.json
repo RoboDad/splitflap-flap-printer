@@ -1,0 +1,46 @@
+{
+  "display": {
+    "num_modules": 1,
+    "module_pitch_mm": 64,
+    "inter_module_gap_mm": 10
+  },
+  "jig": {
+    "type": "minibed",
+    "flip_mode": "left-right"
+  },
+  "output": {
+    "dpi": 360,
+    "format": "png",
+    "bleed_mm": 1.0,
+    "ink_save_mask": true,
+    "labels": true,
+    "label_font_size_pt": 6,
+    "output_dir": "test_output"
+  },
+  "global_transforms": {
+    "scale": [
+      1.0,
+      1.0
+    ]
+  },
+  "custom_flaps": [
+    {
+      "slot": 0,
+      "label": "EP42",
+      "source": "test_images/test_01.png",
+      "type": "single"
+    },
+    {
+      "slot": 1,
+      "label": "EP43",
+      "source": "test_images/test_02.png",
+      "type": "single"
+    },
+    {
+      "slot": 2,
+      "label": "EP44",
+      "source": "test_images/test_03.png",
+      "type": "single"
+    }
+  ]
+}

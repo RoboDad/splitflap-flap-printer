@@ -1,0 +1,29 @@
+{
+    "display": {
+        "num_modules": 24,
+        "module_pitch_mm": 64,
+        "inter_module_gap_mm": 10
+    },
+    "jig": {
+        "type": "minibed",
+        "flip_mode": "left-right"
+    },
+    "output": {
+        "dpi": 360,
+        "format": "png",
+        "bleed_mm": 1.0,
+        "ink_save_mask": true,
+        "labels": true,
+        "label_font_size_pt": 6,
+        "output_dir": "test_svg_output"
+    },
+    "global_transforms": {
+        "fit_mode": "fit"
+    },
+    "custom_flaps": [
+        {"slot": 0, "label": "SVG1", "source": "test_images/test_svg_01.svg", "type": "single"},
+        {"slot": 1, "label": "RAS1", "source": "test_images/test_01.png", "type": "single"},
+        {"slot": 2, "label": "SVG2", "source": "test_images/test_svg_01.svg", "type": "single"},
+        {"slot": 3, "label": "BLNK", "type": "blank"}
+    ]
+}

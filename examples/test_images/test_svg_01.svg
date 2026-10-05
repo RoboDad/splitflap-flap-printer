@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="54mm" height="88.4mm" viewBox="0 0 54 88.4">
+  <!-- Full display face: 54mm wide x 88.4mm tall (43 + 2.4 + 43) -->
+  <rect x="2" y="2" width="50" height="84.4" fill="none" stroke="black" stroke-width="0.5"/>
+  <circle cx="27" cy="20" r="12" fill="#ff5500"/>
+  <circle cx="27" cy="68.4" r="12" fill="#0055ff"/>
+  <text x="27" y="46" font-family="sans-serif" font-size="6" text-anchor="middle" fill="black">SVG TEST</text>
+</svg>

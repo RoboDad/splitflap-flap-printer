@@ -1,0 +1,24 @@
+{
+  "display": {
+    "num_modules": 6,
+    "module_pitch_mm": 64.0,
+    "inter_module_gap_mm": 10.0
+  },
+  "jig": {"type": "minibed", "flip_mode": "left-right"},
+  "output": {
+    "dpi": 360,
+    "format": "png",
+    "bleed_mm": 1.0,
+    "ink_save_mask": true,
+    "labels": true,
+    "output_dir": "test_epilogue_output"
+  },
+  "custom_flaps": [
+    {"slot": 0, "type": "epilogue", "char": "H"},
+    {"slot": 1, "type": "epilogue", "char": "E"},
+    {"slot": 2, "type": "epilogue", "char": "L"},
+    {"slot": 3, "type": "epilogue", "index": 12},
+    {"slot": 4, "type": "epilogue", "char": "O"},
+    {"slot": 5, "type": "epilogue", "char": "!"}
+  ]
+}

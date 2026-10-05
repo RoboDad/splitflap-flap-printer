@@ -1,0 +1,26 @@
+splitflap-flap-printer
+Copyright 2026 Philip Van Valkenberg
+
+Licensed under the Apache License, Version 2.0 (see LICENSE).
+
+This repository bundles third-party material:
+
+  * cad/vendor/flap_profile.scad — flap outline and rounded-square helpers
+    from scottbez1/splitflap (https://github.com/scottbez1/splitflap),
+    Copyright 2015-2021 Scott Bezek and the splitflap contributors,
+    Apache License 2.0.
+
+  * assets/flap_glyphs/ — per-character SVGs rendered with the splitflap
+    project's OpenSCAD font pipeline.  Epilogue is licensed under the SIL
+    Open Font License 1.1; Roboto under the Apache License 2.0.
+
+  * assets/emoji/ — Twemoji graphics (https://github.com/twitter/twemoji),
+    Copyright Twitter, Inc. and other contributors, CC BY 4.0.
+
+  * generators/shan-shui-inf/ — {Shan, Shui}* by Lingdong Huang
+    (https://github.com/LingDong-/shan-shui-inf), MIT License (see the
+    LICENSE file in that directory).  The driver.js harness is part of this
+    repository.
+
+  * assets/photos/tulips_6m.png — Tulips photograph © Natalie Van
+    Valkenberg, licensed CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/).

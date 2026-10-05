@@ -1,0 +1,4 @@
+Pillow>=10.0
+pillow-heif>=0.18
+resvg-py>=0.3
+emoji>=2.0

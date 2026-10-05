@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "splitflap-flap-printer"
+version = "1.0.0"
+description = "UV-print layout generator for custom flaps on scottbez1/splitflap displays (eufyMake E1 + laser-cut jig)"
+readme = "README.md"
+license = { text = "Apache-2.0" }
+authors = [{ name = "Philip Van Valkenberg" }]
+requires-python = ">=3.10"
+dependencies = [
+    "Pillow>=10.0",
+    "pillow-heif>=0.18",
+    "resvg-py>=0.3",
+    "emoji>=2.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/RoboDad/splitflap-flap-printer"
+"Upstream display project" = "https://github.com/scottbez1/splitflap"
+
+[project.scripts]
+flap_printer = "flap_printer.cli:main"
+
+# The package locates assets/, generators/ and cad/ relative to its own
+# source directory, so install it in editable mode (pip install -e .) rather
+# than building a wheel.
+[tool.setuptools]
+packages = ["flap_printer"]

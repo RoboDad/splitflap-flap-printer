@@ -1,0 +1,27 @@
+{
+  "display": {
+    "num_modules": 4,
+    "module_pitch_mm": 64.0,
+    "inter_module_gap_mm": 10.0
+  },
+  "preview": {
+    "enabled": true,
+    "columns": 8,
+    "dpi": 107
+  },
+  "jig": {"type": "minibed", "flip_mode": "front-back"},
+  "output": {
+    "dpi": 508,
+    "format": "png",
+    "bleed_mm": 1.0,
+    "ink_save_mask": true,
+    "labels": true,
+    "output_dir": "test_multimodule_output"
+  },
+  "custom_flaps": [
+    {"slot": 0, "type": "epilogue", "char": "A"},
+    {"slot": 1, "type": "multi-module", "label": "M1", "source": "test_images/skyline.png", "module_range": [0, 2]},
+    {"slot": 2, "type": "multi-module", "label": "M2", "source": "test_images/triptych.png", "module_range": [1, 2]}
+  ]
+}
+

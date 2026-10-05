@@ -1,0 +1,39 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+*.egg-info/
+build/
+dist/
+
+# flap_printer render output (relative to the job file)
+examples/*_output/
+output/
+
+# Procedural-generator + raster caches (reproducible from job configs)
+generated/
+
+# Your own images — referenced from job files, never committed
+assets/local/*
+!assets/local/.gitkeep
+
+# Large regenerable placeholder test images
+examples/test_images/placeholders/*.png
+*.heic
+*.HEIC
+
+# OpenSCAD exports from cad/ (regenerate from the .scad files)
+cad/*.stl
+cad/*.3mf
+cad/*.dxf
+cad/*.svg
+
+# OpenSCAD dimension cache written by --scad-dims
+.flap_printer_dims.json
+
+# OS / editor metadata
+desktop.ini
+Thumbs.db
+.DS_Store
+.vscode/
+.idea/
